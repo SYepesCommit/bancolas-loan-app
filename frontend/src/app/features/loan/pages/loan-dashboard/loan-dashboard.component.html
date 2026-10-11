@@ -1,0 +1,20 @@
+<app-dashboard-header />
+
+<main class="dashboard-container">
+
+  <app-metrics-summary 
+    [approvedCount]="approvedCount()"
+    [rejectedCount]="rejectedCount()"
+    [totalVolume]="totalVolume()" />
+
+  <app-loan-form 
+    [customers]="customers()"
+    [loading]="loading()"
+    [lastResult]="lastResult()"
+    [errorMessage]="errorMessage()"
+    (submitForm)="handleLoanSubmission($event)" />
+
+  <app-loan-table 
+    [loans]="loans()" />
+
+</main>

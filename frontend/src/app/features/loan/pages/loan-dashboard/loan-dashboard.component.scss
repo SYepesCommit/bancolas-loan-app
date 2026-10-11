@@ -1,0 +1,212 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-panel {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+
+  .panel-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0;
+      font-size: 1.1rem;
+      color: #0f172a;
+
+      mat-icon {
+        color: #2563eb;
+      }
+    }
+  }
+
+  .panel-body {
+    padding: 1.5rem;
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+
+      mat-form-field {
+        mat-icon[matSuffix] {
+          color: #64748b;
+        }
+
+        &.mat-focused mat-icon[matSuffix] {
+          color: #2563eb;
+        }
+      }
+    }
+
+    .db-customers-bar {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 0.85rem 1.25rem;
+      margin: 0.75rem 0 1.25rem 0;
+
+      .bar-header {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #475569;
+        margin-bottom: 0.75rem;
+
+        mat-icon {
+          font-size: 1.15rem;
+          width: 1.15rem;
+          height: 1.15rem;
+          color: #2563eb;
+        }
+      }
+
+      .chips-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+
+        .db-chip {
+          all: unset;
+          box-sizing: border-box;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          background: #ffffff;
+          border: 1.5px solid #cbd5e1;
+          padding: 0.4rem 0.8rem;
+          border-radius: 20px;
+          cursor: pointer;
+          font-size: 0.825rem;
+          transition: all 0.2s ease-in-out;
+
+          .chip-avatar {
+            font-size: 1.1rem;
+            width: 1.1rem;
+            height: 1.1rem;
+            color: #64748b;
+          }
+
+          .chip-title {
+            font-weight: 700;
+            color: #0f172a;
+          }
+
+          .chip-tag {
+            font-size: 0.725rem;
+            font-weight: 600;
+            padding: 0.15rem 0.45rem;
+            border-radius: 12px;
+
+            &.tag-success {
+              background-color: #dcfce7;
+              color: #15803d;
+            }
+
+            &.tag-danger {
+              background-color: #fee2e2;
+              color: #b91c1c;
+            }
+          }
+
+          &:hover {
+            border-color: #3b82f6;
+            background-color: #f0f9ff;
+            transform: translateY(-1px);
+          }
+
+          &.selected {
+            border-color: #2563eb;
+            background-color: #eff6ff;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+
+            .chip-avatar {
+              color: #2563eb;
+            }
+          }
+
+          &.is-blocked:hover {
+            background-color: #fef2f2;
+            border-color: #ef4444;
+          }
+        }
+      }
+    }
+
+    .simulation-box {
+      display: flex;
+      gap: 2rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+
+      .sim-item {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-size: 0.75rem;
+          color: #64748b;
+        }
+
+        strong {
+          font-size: 1.1rem;
+          color: #0f172a;
+        }
+      }
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        background-color: #2563eb !important;
+        color: #ffffff !important;
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+        border-radius: 8px;
+
+        &:disabled {
+          background-color: #e2e8f0 !important;
+          color: #94a3b8 !important;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .result-banner {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+
+      &.APPROVED {
+        background: #dcfce7;
+        color: #14532d;
+        border: 1px solid #86efac;
+      }
+
+      &.REJECTED {
+        background: #fee2e2;
+        color: #7f1d1d;
+        border: 1px solid #fca5a5;
+      }
+    }
+  }
+}

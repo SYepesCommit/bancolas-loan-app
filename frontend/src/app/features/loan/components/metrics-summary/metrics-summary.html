@@ -1,0 +1,31 @@
+<section class="metrics-grid">
+  <div class="metric-card">
+    <div>
+      <p class="label">Aprobados</p>
+      <h3 class="value approved">{{ approvedCount() }}</h3>
+    </div>
+    <div class="icon-wrapper approved">
+      <mat-icon>check_circle</mat-icon>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div>
+      <p class="label">Rechazados</p>
+      <h3 class="value rejected">{{ rejectedCount() }}</h3>
+    </div>
+    <div class="icon-wrapper rejected">
+      <mat-icon>cancel</mat-icon>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div>
+      <p class="label">Volumen Aprobado</p>
+      <h3 class="value volume">{{ totalVolume() | currency:'USD':'symbol':'1.0-0' }}</h3>
+    </div>
+    <div class="icon-wrapper volume">
+      <mat-icon>payments</mat-icon>
+    </div>
+  </div>
+</section>

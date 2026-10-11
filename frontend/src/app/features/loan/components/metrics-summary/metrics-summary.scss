@@ -1,0 +1,46 @@
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+
+  .metric-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .label {
+      font-size: 0.875rem;
+      color: #64748b;
+      margin: 0 0 0.25rem 0;
+    }
+
+    .value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0;
+
+      &.approved { color: #16a34a; }
+      &.rejected { color: #dc2626; }
+      &.volume { color: #2563eb; }
+    }
+
+    .icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      mat-icon { font-size: 1.5rem; width: 1.5rem; height: 1.5rem; }
+
+      &.approved { background: #dcfce7; color: #16a34a; }
+      &.rejected { background: #fee2e2; color: #dc2626; }
+      &.volume { background: #dbeafe; color: #2563eb; }
+    }
+  }
+}
