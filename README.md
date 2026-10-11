@@ -48,24 +48,33 @@ Clonar el repositorio:
 git clone https://github.com/SYepesCommit/bancolas-loan-app.git
 ```
 
-## 2. Infraestructura (Docker Compose)
+## 2. Configurar Variables de Entorno
+Copia la plantilla .env.example a un archivo .env dentro de la carpeta backend/ y define tus credenciales locales (Aunque para este caso de prueba, no es necesario)
+
+```env
+cd backend
+cp .env.example .env   # En Windows PowerShell: copy .env.example .env
+```
+
+## 3. Infraestructura (Docker Compose)
 Asegúrate de tener Docker (Desktop) corriendo y ejecuta:
 
 ```env
+cd backend
 docker-compose up -d
 ```
 -PostgreSQL: localhost:5432 (BD: bancolas_db)
 
 -RabbitMQ Management: http://localhost:15672 (User/Pass: guest/guest)
 
-## 3. Iniciar el Backend
+## 4. Iniciar el Backend
 
 ```env
 cd backend
 .\mvnw.cmd spring-boot:run
 ```
 
-## 4. Iniciar el Frontend
+## 5. Iniciar el Frontend
 
 ```env
 cd ../frontend
